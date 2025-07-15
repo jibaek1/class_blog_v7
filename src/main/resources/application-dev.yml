@@ -15,7 +15,6 @@ logging:
     #com.tenco.user: WARN
 # spring 환경 설정
 spring:
-  # 데이터 베이스 연결 설정 (H2 인메모리 데이터베이스)
   datasource:
     #driver-class-name: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://localhost:3306/blog?useSSl=false&serverTimezone=Asia/Seoul
@@ -38,7 +37,7 @@ spring:
 
   # JPA 설정
   jpa:
-    open-in-view: true # 기본값 true
+    open-in-view: false # 기본값 true
     hibernate:
       # create: 애플리케이션 시작시 테이블을 새로 생성
       # 기존 데이터는 모두 삭제됨 (개발용)
