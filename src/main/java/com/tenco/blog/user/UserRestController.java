@@ -50,12 +50,14 @@ public class UserRestController {
         reqDTO.validate();
 
         UserResponse.LoginDTO loginUser = userService.login(reqDTO);
-
-        session.setAttribute("sessionUser",loginUser);
+        // 세션에 정보 저장
+        // session.setAttribute("sessionUser",loginUser);
 
         return ResponseEntity.ok(new ApiUtil<>(loginUser));
     }
 
+
+    // 로그아웃 API
     @GetMapping("/logout")
     public ResponseEntity<ApiUtil<String>> logout(HttpSession session) {
         log.info("로그아웃 API 호출");
@@ -91,9 +93,4 @@ public class UserRestController {
 
         return ResponseEntity.ok(new ApiUtil<>(updateUser));
     }
-
-    // 로그아웃 처리
-
-
-
 }
