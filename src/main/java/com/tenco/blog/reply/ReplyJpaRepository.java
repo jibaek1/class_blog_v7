@@ -1,10 +1,9 @@
 package com.tenco.blog.reply;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 // @Repository JpaRepository 상속 하기 때문에 자동으로 IoC 대상이 됨
-public interface ReplyJPARepository extends JpaRepository<Reply,Long> { // 엔티티 리프리 PK 타입 Long
+public interface ReplyJpaRepository extends JpaRepository<Reply,Long> { // 엔티티 리프리 PK 타입 Long
     // CRUD 기능 추가
     // Save(Reply) 댓글 저장
     // findById(Long id): Id로 댓글 조회

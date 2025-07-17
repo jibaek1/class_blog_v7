@@ -24,6 +24,8 @@ repositories {
 }
 
 dependencies {
+	// https://mvnrepository.com/artifact/com.auth0/java-jwt
+	implementation group: 'com.auth0', name: 'java-jwt', version: '4.4.0'
 	// 유효성 검사 기능 추가
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	// JPA 의존성 설정 (ORM -- 자바진형 --> JPA(스펙 : 인터페이스) --> 하이버네이트

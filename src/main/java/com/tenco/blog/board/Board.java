@@ -2,14 +2,13 @@ package com.tenco.blog.board;
 
 import com.tenco.blog.reply.Reply;
 import com.tenco.blog.user.User;
-import com.tenco.blog.utils.MyDateUtil;
+import com.tenco.blog._core.utils.MyDateUtil;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -77,7 +76,6 @@ public class Board {
     // 수정 기능 추가
     public void update(BoardRequest.UpdateDTO updateDTO) {
         // 사용자가 던진 값이 유효한지 확인 하는 절차
-        updateDTO.validate();
 
         this.title = updateDTO.getTitle();
         this.content = updateDTO.getContent();
