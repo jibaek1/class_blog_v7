@@ -85,4 +85,8 @@ public class Board {
 
     }
 
+    public String getWriterName() {
+        return this.getUser().getUsername();
+    }
+
 }

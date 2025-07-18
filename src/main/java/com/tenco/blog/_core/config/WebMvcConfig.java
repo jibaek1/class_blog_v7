@@ -18,10 +18,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor)
                 // REST API 경로 변경
-                .addPathPatterns("/api/")
+                 .addPathPatterns("/api/**")
                 // 공개 API는 제외 처리
                 .excludePathPatterns(
-                        "/api/boards", // 게시글 목록은 누구나 응답 받을 수 있음
                         "/api/boards/{id:\\d+}" // 게시글 상세보기 누구나 응답 허용
                 );
     }

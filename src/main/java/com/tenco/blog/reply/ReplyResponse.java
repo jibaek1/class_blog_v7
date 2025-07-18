@@ -1,6 +1,5 @@
 package com.tenco.blog.reply;
 
-
 import lombok.Builder;
 import lombok.Data;
 

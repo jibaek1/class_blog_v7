@@ -6,7 +6,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
-public interface UserJpaRepository extends JpaRepository<User,Long> {
+public interface UserJpaRepository extends JpaRepository<User, Long> {
 
     // 사용자명과 비밀번호로 사용자 조회 (로그인용)
     @Query("SELECT u FROM User u WHERE u.username = :username AND u.password = :password")
@@ -15,5 +15,5 @@ public interface UserJpaRepository extends JpaRepository<User,Long> {
 
     // 사용자 이름으로 사용자 조회(중복 체크용)
     @Query("SELECT u FROM User u WHERE u.username = :username")
-    Optional<User> findByUsername(@Param("username")String username);
+    Optional<User> findByUsername(@Param("username") String username);
 }
